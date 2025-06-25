@@ -2,6 +2,8 @@
   import {ContentSwitcher,Switch} from 'carbon-components-svelte';
   import Online from './lib/online.svelte';
   import Offline from './lib/offline.svelte';
+    import Mergecheck from './lib/mergecheck.svelte';
+    import Mergecheck2 from './lib/mergecheck2.svelte';
 
 
   let currentpage="online";
@@ -27,13 +29,19 @@
 <ContentSwitcher  size='sm'>
   <Switch text="online" on:click= {()=> handleSwitch('online')}/>
   <Switch text="offline" on:click={()=>handleSwitch('offline')}/>
+  <Switch text="mergecheck" on:click={()=>handleSwitch('mergecheck')}/>
+  <Switch text="mergecheck2" on:click={()=>handleSwitch('mergecheck2')}/>
 </ContentSwitcher>
 </div>
 
 <div class="pages">
   {#if currentpage === 'online'}
     <Online />  <!-- Render Online component -->
-  {:else}
+  {:else if currentpage === 'offline'}
     <Offline /> <!-- Render Offline component -->
+  {:else if currentpage === 'mergecheck'}
+    <Mergecheck />
+  {:else}
+    <Mergecheck2 />
   {/if}
 </div>
