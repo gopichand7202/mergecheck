@@ -40,7 +40,7 @@
       width: 300px;
       padding: 10px;
       font-size: 16px;
-      border: 2px solid #ccc;
+      border: 4px solid #ccc;
       border-radius: 5px;
       margin-bottom: 20px;
     }
@@ -114,11 +114,11 @@
       </div>
       <!-- Additional Form for Image Data -->
       <div class="form-container">
-        <h3>Image Details</h3>
+        <h3>Image Details for the secondary check</h3>
         <input 
           type="text" 
           
-          placeholder="Enter additional data..." 
+          placeholder="Enter additional data... for the secondary merge check" 
         />
       </div>
     </div>
